@@ -19,20 +19,20 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     controller =
         AnimationController(duration: Duration(seconds: 3), vsync: this);
     controller.forward();
-    controller.addListener(() {
+    
       controller.addListener(() {
         setState(() {
           controller.value;
         });
         print(controller.value);
       });
-    });
+   
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red.withOpacity(controller.value),
+      backgroundColor: Colors.green.withOpacity(controller.value),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
